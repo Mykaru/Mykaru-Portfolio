@@ -1,0 +1,58 @@
+* {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    margin: 0;
+    background-color: #0C0C0C;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 93%;
+    margin: 0 50px;
+    height: 100px;
+}
+
+a.logo-pc {
+    text-align: start;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 45px;
+    letter-spacing: 0.05em;
+}
+
+.blue {
+    color: #1359C1;
+}
+
+ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+nav ul.pc li{
+    align-items: center;
+    list-style-type: none;
+    display: inline-block; 
+    padding: 12px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+nav ul li a:hover{
+    color: #C5C6C7;
+    transition: .3s;    
+}
