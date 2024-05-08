@@ -268,7 +268,6 @@ hr {
 .card-image img {
     border-radius: 20px;
     height: auto;
-    max-width: 90%;
 }
 
 .card-image-mine {
@@ -284,7 +283,7 @@ hr {
 
 
 .card-text {
-    max-width: 50%;
+    max-width: 45%;
 }
 
 button {
@@ -322,6 +321,7 @@ button {
 }
 
 img.logo {
+    height: 150px;
     margin-bottom: 30px;
 }
 
@@ -345,10 +345,7 @@ img.logo {
 }
 
 
-.form-container {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 form {
     width: 50%;
@@ -398,3 +395,145 @@ footer {
     height: 100%;
 }
 
+@media only screen and (max-width: 1340px) {
+    .hero {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-content-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-text {
+        margin-top: 500px;
+        text-align: center;
+        max-width: fit-content;
+        margin-bottom: 50px;
+    }
+
+    .hero-image {
+        margin-right: 0;
+    }
+    
+    .hero-image img {
+        height: 700px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 74px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .about-me {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .card-text {
+        max-width: 100%;
+    }
+
+    .card-image {
+        flex: 1;
+        height: auto;
+    }
+
+    .card-image img {
+        border-radius: 20px;
+        height: auto;
+        width: 100%;
+    }
+
+    .skill-row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 125px;
+    }
+    
+    .skill-card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 25px 0;
+    }
+
+    .skill-card img {
+        width: 100%;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .image-container {
+        height: 650px;
+        width: 100%;
+        margin: 4px 0;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-container img {
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    .image-container-portrait {
+        width: 100%;
+        height: 550px;
+        margin: 4px 0;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-container-portrait img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+
+    .footer-txt {
+        margin: 0 100px;
+        text-align: center;
+    }
+  }
