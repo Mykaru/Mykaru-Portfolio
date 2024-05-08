@@ -400,6 +400,7 @@ footer {
     position: relative;
     background-color: #1A1A1A;
     height: 300px;
+    width: 100%;
     z-index: 1;
 }
 
@@ -545,7 +546,15 @@ footer {
     }
 
 
-
+    .content {
+        background-color: #0C0C0C;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+        width: 100%;
+    }
 
     .hero {
         width: 100%;
