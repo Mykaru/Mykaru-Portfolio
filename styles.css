@@ -463,8 +463,9 @@ footer {
     }
 
     a.logo-pc {
-       font-weight: 700;
+        font-weight: 700;
         font-size: 36px;  
+        margin-left: 15px;
     }
 
     ul {
@@ -474,7 +475,7 @@ footer {
     .hamburger {
         position: relative;
         width: 35px;
-        margin-right: 50px;
+        margin-right: 15px;
         height: 4px;
         background: #fff;
         border-radius: 2px;
