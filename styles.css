@@ -27,7 +27,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     height: 100px;
-    z-index: 2;
+    z-index: 3;
     background-color: #0C0C0C;
     top: 0;
     left: 0;
@@ -72,6 +72,18 @@ nav ul li a{
 nav ul li a:hover{
     color: #C5C6C7;
     transition: .3s;    
+}
+
+div.mobile-nav {
+    display: none;
+}
+
+a.logo {
+    display: none;
+}
+
+.mobile-header {
+    display: none;
 }
 
 .hero {
@@ -271,9 +283,7 @@ hr {
 }
 
 .card-image-mine {
-    flex: 1;
     height: 400px;
-    height: auto;
 }
 
 .card-image-mine img {
@@ -344,7 +354,11 @@ img.logo {
     justify-content: center;
 }
 
-
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
 
 form {
@@ -396,6 +410,133 @@ footer {
 }
 
 @media only screen and (max-width: 1340px) {
+    section {
+        max-width: 1500px;
+        margin:100px 50px;
+    }
+
+    .mobile-header {
+        display: block;
+    }
+
+    div.mobile-nav {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .menu {
+        display: flex;  
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background-color: #191919;
+        max-width: 300px; 
+        width: 100%;
+        height: 100%;
+        padding-top: 60px;
+        margin-top: 100px;
+        transition: 0.5s;
+        z-index: 1;
+        margin-right: -40px;
+    }
+
+    .menu li {
+        width: 100%;
+        list-style-type: none;
+    }
+
+    .menu li a {
+        display: block;
+        font-size: 28px;
+        text-align: left;
+        padding: 40px;
+        transition: .5s;
+    }
+
+
+    ul {
+        padding: 0;
+    }
+    
+    .hamburger {
+        position: relative;
+        width: 35px;
+        margin-right: 50px;
+        height: 4px;
+        background: #fff;
+        border-radius: 2px;
+        cursor: pointer;
+        z-index: 3;
+        transition: .3s;
+    }
+
+    .hamburger:before,
+    .hamburger:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        right: 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: .3s;
+    }
+
+    .hamburger:before {
+        top: -10px;
+        width: 25px;
+    }
+
+    .hamburger:after {
+        top: 10px;
+        width: 25px;
+    }
+
+    .toggle-menu {
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        z-index: 4;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .hamburger,
+    .toggle-menu {
+        display: block;
+        /*display: none */
+    }
+    
+    .mobile-nav input:checked  ~ .hamburger {
+        background: transparent;
+    }
+
+    .mobile-nav input:checked  ~ .hamburger:before {
+        top:0;
+        transform: rotate(-45deg);
+        width: 30px;
+    }
+
+    .mobile-nav input:checked  ~ .hamburger:after {
+        top:0;
+        transform: rotate(45deg);
+        width: 30px;
+    }
+
+    .mobile-nav input:checked  ~ .menu{
+        right: 0;
+    }
+
+    ul.pc li a {
+        display: none;
+    }
+
+
+
+
     .hero {
         width: 100%;
         margin: 0;
@@ -409,7 +550,7 @@ footer {
     }
 
     .hero-text {
-        margin-top: 500px;
+        margin-top: 400px;
         text-align: center;
         max-width: fit-content;
         margin-bottom: 50px;
@@ -422,6 +563,15 @@ footer {
     .hero-image img {
         height: 700px;
         width: auto;
+    }
+
+    .story-image {
+        margin-right: 0;
+    }
+    
+    .story-image img {
+        height: auto;
+        width: 700px;
     }
 
     h1 {
@@ -480,10 +630,23 @@ footer {
         flex-direction: column;
     }
 
+    hr  {
+        width: 72%;
+        margin: 0;
+    }
+
+    hr.underline {
+        margin-bottom: 25px;
+        width: 100%;
+        border: 1px solid #4A4A4A;
+        border-radius: 2px;
+        margin: 0;
+    }
+
     .image-container {
         height: 650px;
         width: 100%;
-        margin: 4px 0;
+        margin: 6px 0;
         border-radius: 5px;
         overflow: hidden;
         display: flex;
@@ -512,6 +675,35 @@ footer {
         width: 100%;
         height: auto;
         cursor: pointer;
+    }
+
+    .card-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .card-image-mine {
+        flex: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-image-mine img {
+        border-radius: 20px;
+        height: 400px;
+    }
+
+    .work-row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 75px;
+    }
+
+    .future {
+        width: 100%;
+        text-align: center;
     }
 
     .form-container {
