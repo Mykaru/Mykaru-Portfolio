@@ -109,11 +109,21 @@ nav ul li a:hover{
     width: 50vw;
 }
 
+.story-image {
+    margin-right: -7vw;
+}
+
+.story-image img {
+    height: auto;
+    width: 50vw;
+}
+
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 92px;
     color: white;
+    margin: 0;
 }
 
 h2 {
@@ -121,6 +131,7 @@ h2 {
     font-weight:400;
     font-size: 42px;
     color: #D8D8D8;
+    margin: 0;
 }
 
 p {
@@ -138,17 +149,33 @@ p {
     justify-content: center;
     flex-direction: column;
     margin-top: 100vh;
+    padding-top: 50px;
     z-index: 1;
     width: 100%;
 }
 
+.content-portfolio  {
+    background-color: #0C0C0C;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    z-index: 1;
+    width: 100%;
+}
+
+
 section {
     max-width: 1500px;
-    margin: 0 150px;
+    margin:100px 150px;
 }
 
 @media (min-width: 1850px) {
     .content {
+        align-items: center;
+    }
+    .content-portfolio {
         align-items: center;
     }
 
@@ -157,11 +184,40 @@ section {
     }
 }
 
+
+
+hr {
+    border: 2px solid #4A4A4A;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 250px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-container {
+    width: 33%;
+    height: 550px;
+    margin: 4px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: auto;
+    height: 100%;
+}
+
 .about-me {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 150px;
 }
 
 .card-image {
@@ -172,10 +228,23 @@ section {
 .card-image img {
     border-radius: 20px;
     height: auto;
+    max-width: 90%;
 }
 
+.card-image-mine {
+    flex: 1;
+    height: 400px;
+    height: auto;
+}
+
+.card-image-mine img {
+    border-radius: 20px;
+    height: 500PX;
+}
+
+
 .card-text {
-    max-width: 40%;
+    max-width: 50%;
 }
 
 button {
@@ -192,8 +261,8 @@ button {
     margin-top: 50px;
 }
 
-.my-skills {
-    margin-top: 100px;
+.future {
+    width: 47%;
 }
 
 .skill-row {
@@ -215,9 +284,6 @@ img.logo {
     margin-bottom: 30px;
 }
 
-.my-work {
-    margin-top: 100px;
-}
 
 .work-row {
     display: flex;
@@ -236,3 +302,58 @@ img.logo {
     display: flex;
     justify-content: center;
 }
+
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    width: 50%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #4A4A4A;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+form button {
+    margin-top: 40px;
+}
+
+.btn-container {
+    text-align: right;
+}
+
+footer {
+    position: relative;
+    background-color: #1A1A1A;
+    height: 300px;
+    z-index: 1;
+}
+
+.footer-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
