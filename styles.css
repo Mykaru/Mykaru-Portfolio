@@ -299,6 +299,7 @@ hr {
 }
 
 button {
+    position: relative;
     border: 5px solid #1359C1;
     background-color: transparent;
     padding: 16px 32px;
@@ -310,10 +311,27 @@ button {
     transition: 0.2s ease-in-out;
 }
 
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Adjust width and height to cover entire button */
+    height: 100%;
+    background: radial-gradient(circle, transparent, rgba(17, 89, 197, 0.8)); /* Adjust the gradient as needed */
+    filter: blur(30px); /* Adjust the blur radius as needed */
+    transition: opacity 0.3s; /* Add transition for smooth fade-in effect */
+    opacity: 0; /* Initially invisible */
+    transform: translate(-50%, -50%); /* Center the pseudo-element */
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
 button:hover {
     border: 5px solid #3f86f1;
     color: rgb(170, 170, 170);
-
 }
 
 .abt-CTA {
