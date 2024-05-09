@@ -329,10 +329,7 @@ button:hover::before {
     opacity: 1;
 }
 
-button:hover {
-    border: 5px solid #3f86f1;
-    color: rgb(170, 170, 170);
-}
+
 
 .abt-CTA {
     margin-top: 50px;
